@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ДемонтажСтройИнжиниринг | Водолазные работы и подводный демонтаж</title>
+    <link rel="icon" type="image/png" href="https://media.istockphoto.com/id/908906956/vector/scuba-diving-icon.jpg?s=612x612&w=0&k=20&c=S-DIgcuzSL2wk1bvKPx3YPUWvm0jc7rt-rKrG4GJyuo=">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <nav class="navbar">
         <div class="logo">🤿 ДСИ</div>
+        <ul class="nav-links">
+            <li><a href="#header">Главная</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#gallery">Примеры работ</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
         <h1>ДемонтажСтройИнжиниринг</h1>
         <p>Профессиональные водолазные работы и подводный демонтаж<br>
         Осмотр, ремонт, строительство и демонтаж под водой любой сложности<br>
@@ -59,12 +71,48 @@
     <section id="gallery">
         <h2>Примеры наших работ</h2>
         <div class="gallery">
-            <img src="https://api.army.mil/e2/c/images/2019/02/15/543979/max1200.jpg" alt="Водолаз на глубине">
-            <img src="https://prodivertc.com/wp-content/uploads/2021/06/Underwater-Welder-Training-scaled-e1635905801337.jpg" alt="Подводная сварка">
-            <img src="https://bizimages.withfloats.com/actual/1afb6c9bf987443c908c14f93b25054e.jpg" alt="Подводная резка металла">
-            <img src="https://oxylance.com/wp-content/uploads/oxylance-underwater.jpg" alt="Демонтаж под водой">
-            <img src="https://i.ytimg.com/vi/l1knCR6xAzo/maxresdefault.jpg" alt="Монтаж подводных кабелей">
-            <img src="https://images.marinetechnologynews.com/images/maritime/w1200h1200/midco-diver-56516.jpg" alt="Работа с трубопроводами">
+            <div class="gallery-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Working_Diver_02.jpg" alt="Подводный демонтаж">
+                <div class="description">
+                    <h4>Демонтаж подводной конструкции</h4>
+                    <p>В 2024 году провели демонтаж старой опоры моста в реке Волга. Использовали подводную резку и подъёмные механизмы. Глубина — 15 м, срок — 5 дней.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://pilebuck.com/wp-content/uploads/2016/11/Cover.-Credit-US-Navy-e1479854421948.jpg" alt="Подводная сварка">
+                <div class="description">
+                    <h4>Подводная сварка трубопровода</h4>
+                    <p>Ремонт нефтепровода в Балтийском море. Сварка на глубине 20 м, с использованием специального оборудования. Проект завершён без остановки эксплуатации.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.licdn.com/dms/image/v2/D5612AQF1mPOtYqpvog/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1728086668853?e=2147483647&v=beta&t=bjot2DqiWJLgxrvQhK6hk2Bro1LBCUcsPh4-an67MA0" alt="Осмотр опор">
+                <div class="description">
+                    <h4>Осмотр и диагностика опор</h4>
+                    <p>Инспекция опор ГЭС на реке Енисей. Видеосъёмка выявила коррозию, проведён ремонт. Глубина — 10 м, команда из 4 водолазов.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://indepthmag.com/wp-content/uploads/2025/09/opener-02_Flange_GC-1-1000x600.webp" alt="Монтаж кабелей">
+                <div class="description">
+                    <h4>Монтаж подводных кабелей</h4>
+                    <p>Укладка оптоволоконного кабеля в Чёрном море. Длина — 5 км, глубина до 30 м. Проект для телеком-компании, завершён за 7 дней.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://dan.org/wp-content/uploads/2021/04/Perspective-military-divers-train-underwater-in-pool.jpg" alt="Очистка судна">
+                <div class="description">
+                    <h4>Очистка корпуса судна</h4>
+                    <p>Очистка от обрастания танкера в порту Владивосток. Использованы гидроструйные аппараты. Глубина — 5 м, площадь — 2000 м².</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://assets.isu.pub/document-structure/230302115956-282a9d31432554745cb87e442a0193e2/v1/724af89aa042d27c492debfa248db23f.jpeg" alt="Поиск объектов">
+                <div class="description">
+                    <h4>Поиск и подъём затонувшего оборудования</h4>
+                    <p>Подъём буровой установки в озере Байкал. Глубина — 25 м, использованы подъёмные баллоны. Операция успешна, без ущерба экологии.</p>
+                </div>
+            </div>
         </div>
     </section>
 
