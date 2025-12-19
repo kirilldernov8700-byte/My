@@ -2,7 +2,6 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
@@ -13,8 +12,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Простая анимация появления карточек услуг при скролле (опционально)
-const serviceCards = document.querySelectorAll('.service-card');
+// Анимация появления элементов при скролле
+const animatedElements = document.querySelectorAll('.service-card, .gallery-item');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -25,9 +24,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-serviceCards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
+animatedElements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
