@@ -1,4 +1,4 @@
-// Плавный скролл по якорным ссылкам
+// Плавный скролл
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,10 +9,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+        // Закрываем мобильное меню после клика
+        navLinks.classList.remove('active');
+        burger.classList.remove('toggle');
     });
 });
 
-// Анимация появления элементов при скролле
+// Бургер-меню
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    burger.classList.toggle('toggle');
+});
+
+// Подсветка активного пункта меню при скролле
+const sections = document.querySelectorAll('section, header');
+const navItems = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '#header';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            current = '#' + section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === current) {
+            item.classList.add('active');
+        }
+    });
+
+    // Эффект при скролле
+    if (window.scrollY > 100) {
+        document.querySelector('.navbar').classList.add('scrolled');
+    } else {
+        document.querySelector('.navbar').classList.remove('scrolled');
+    }
+});
+
+// Анимация появления элементов
 const animatedElements = document.querySelectorAll('.service-card, .gallery-item');
 
 const observer = new IntersectionObserver((entries) => {
